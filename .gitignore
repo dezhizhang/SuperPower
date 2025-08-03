@@ -1,0 +1,99 @@
+# =============== Unity 默认忽略文件 ===================
+
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+MemoryCaptures/
+UserSettings/
+
+# =============== 平台生成文件 ===================
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# =============== Unity Assets Cache ===============
+
+# Shader cache
+Assets/ShaderCache/
+Assets/**/*.g.meta
+
+# Addressables
+Library/com.unity.addressables/
+Assets/AddressableAssetsData/*/AssetBundles/
+Assets/StreamingAssets/aa.meta
+
+# Lightmap
+LightingData.asset
+Lightmap-*
+
+# =============== IDE/编辑器配置文件 ===============
+
+# VS / Rider
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+.vscode/
+.idea/
+*.code-workspace
+*.sln.iml
+
+# JetBrains Rider 特有
+.idea/
+.idea/**
+
+# VSCode
+.vscode/
+.vscode/**
+
+# =============== Unity Collaborate ===============
+.collabignore
+.CollabIgnore
+
+# =============== Unity Cloud Build ===============
+*.apk
+*.aab
+*.ipa
+
+# =============== 构建文件（可选） ===============
+*.exe
+*.app
+*.msi
+*.apk
+*.aab
+*.xcodeproj/
+*.xcworkspace/
+*.xcuserdata/
+DerivedData/
+
+# =============== Git 系统文件 ===============
+*.orig
+*.rej
+*.diff
+*.patch
+
+# =============== 环境变量文件（如有） ===============
+.env
+.env.*
+
+# =============== 可选忽略 ===============
+# 如果不希望锁定包版本，可取消注释忽略 lock 文件
+# Packages/manifest.lock.json
+
