@@ -17,19 +17,32 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.D))
+        // if (Input.GetKey(KeyCode.D))
+        // {
+        //     _rb.velocity = new Vector2(3, 0);
+        //     transform.eulerAngles = new Vector3(0, 0, 0);
+        // }
+        // else if (Input.GetKey(KeyCode.A))
+        // {
+        //     _rb.velocity = new Vector2(-3, 0);
+        //     transform.eulerAngles = new Vector3(0, -180, 0);
+        // }
+        // else
+        // {
+        //     _rb.velocity = new Vector2(0, 0);
+        // }
+
+        float horizontal = Input.GetAxis("Horizontal");
+        _rb.velocity = new Vector2(horizontal * Time.deltaTime * 3, _rb.velocity.y);
+        // float vertical = Input.GetAxis("Vertical");
+
+        if (horizontal > 0)
         {
-            _rb.velocity = new Vector2(3, 0);
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            transform.eulerAngles = new Vector3(0, 0);
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (horizontal < 0)
         {
-            _rb.velocity = new Vector2(-3, 0);
-            transform.eulerAngles = new Vector3(0, -180, 0);
-        }
-        else
-        {
-            _rb.velocity = new Vector2(0, 0);
+            transform.eulerAngles = new Vector3(0, 180);
         }
     }
 }
