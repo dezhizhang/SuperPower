@@ -20,10 +20,12 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             _rb.velocity = new Vector2(3, 0);
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else if (Input.GetKey(KeyCode.A))
         {
             _rb.velocity = new Vector2(-3, 0);
+            transform.eulerAngles = new Vector3(0, -180, 0);
         }
         else
         {
