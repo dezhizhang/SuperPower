@@ -7,7 +7,27 @@ using UnityEngine;
 /// </summary>
 public class PlayerMove : MonoBehaviour
 {
-    public GameObject player;
-    
-    
+    // 获取玩家刚体
+    private Rigidbody2D _rb;
+
+    private void Awake()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.D))
+        {
+            _rb.velocity = new Vector2(3, 0);
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            _rb.velocity = new Vector2(-3, 0);
+        }
+        else
+        {
+            _rb.velocity = new Vector2(0, 0);
+        }
+    }
 }
