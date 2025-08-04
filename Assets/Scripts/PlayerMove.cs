@@ -33,7 +33,7 @@ public class PlayerMove : MonoBehaviour
         // }
 
         float horizontal = Input.GetAxis("Horizontal");
-        _rb.velocity = new Vector2(horizontal * Time.deltaTime * 3, _rb.velocity.y);
+        _rb.velocity = new Vector2(horizontal * 3, 0);
         // float vertical = Input.GetAxis("Vertical");
 
         if (horizontal > 0)
